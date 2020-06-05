@@ -12,12 +12,12 @@ export class GetData extends Component {
             this.fetchData();
         }
 
+        
         fetchData = async () => {
-            const response = await fetch("https://softa.site/weekly_budget/test_fetch.php?login=true&week=1&year=2020");
+            const response = await fetch("https://softa.site/weekly_budget/test_fetch.php?login=true&week=1&year=2020&userid=3");
             const json = await response.json();
-            this.setState({data: json.results });
+            this.setState({data: json.results, output: "Data Loaded..." });
         };
-
 
         render() {
             return (
@@ -27,7 +27,10 @@ export class GetData extends Component {
                         keyExtractor={(x, i) => i}
                         renderItem={({ item }) => 
                             <Text>
-                                {`WEEK: ${item.week_num} YEAR: ${item.year}`}
+                                {` WEEK: ${item.week_num} YEAR: ${item.year}`}
+                                {` Week_info: ${item.extra_info} SUM: ${item.sum_to_use}`}
+                                {` Budget_info: ${item.extra_budget_info} `}
+                                
                             </Text>
                         }
                     />
