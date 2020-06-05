@@ -1,13 +1,13 @@
-##node_modules/**/*
-##.expo/*
-##npm-debug.*
-##*.jks
-##*.p8
-##*.p12
-##*.key
-##*.mobileprovision
-##*.orig.*
-##web-build/
+weekly-budget-app/node_modules/**/*
+weekly-budget-app/.expo/*
+weekly-budget-app/npm-debug.*
+weekly-budget-app/*.jks
+weekly-budget-app/*.p8
+weekly-budget-app/*.p12
+weekly-budget-app/*.key
+weekly-budget-app/*.mobileprovision
+weekly-budget-app/*.orig.*
+weekly-budget-app/web-build/
 
 # macOS
-##.DS_Store
+weekly-budget-app/.DS_Store
